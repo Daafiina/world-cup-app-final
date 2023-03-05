@@ -1,8 +1,7 @@
 <template>
   <nav v-if="$store.state.user">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-    <button @click="$store.dispatch('logout')">Logout</button>
+    <HeaderComp/>
+    <!-- <FooterComp/> -->
   </nav>
   <router-view/>
 </template>
@@ -10,8 +9,17 @@
 <script>
 import { onBeforeMount } from 'vue'
 import { useStore } from 'vuex'
+import HeaderComp from './components/HeaderComp.vue'
+// import FooterComp from './components/FooterComp.vue'
+
+
+
 
 export default {
+  components:{
+    HeaderComp,
+    // FooterComp
+  },
   setup(){
     const store = useStore()
 
@@ -41,12 +49,17 @@ export default {
 }
 
 nav {
-  padding: 30px;
+  padding: 10px;
+
+  
 }
 
 nav a {
   font-weight: bold;
   color: #2c3e50;
+  text-decoration: none;
+
+  
 }
 
 nav a.router-link-exact-active {
