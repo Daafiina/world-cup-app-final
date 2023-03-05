@@ -59,13 +59,5 @@
   textarea {
     resize: vertical;
   }
-  button {
-    width: 100%;
-    border: none;
-    padding: 20px;
-    font-size: 24px;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
+
   </style>
