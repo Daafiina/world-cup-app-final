@@ -37,7 +37,10 @@ const routes = [
   {
     path: '/ContactUs',
     name:'Contact us',
-    component: ()=>import('../views/ContactUs.vue')
+    component: ()=>import('../views/ContactUs.vue'),
+    meta:{
+      requireAuth:true
+    }
   }
 
 ]
