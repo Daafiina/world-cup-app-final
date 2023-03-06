@@ -1,6 +1,5 @@
 <template>
     <nav class="bg-gray-800">
-   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
      <div class="relative flex h-16 items-center justify-between">
        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
          <!-- Mobile menu button-->
@@ -29,15 +28,15 @@
            <img id="icon" class="hidden h-8 w-auto lg:block" src="../assets/img/world-cup.png" alt="Your Company">
          </div>
          <div class="hidden sm:ml-6 sm:block">
-           <div class="flex space-x-4">
+           <div class="flex space-x-4" id="links">
              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-             <a href="../views/HomeView.vue" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page" ><router-link to="/">Home</router-link></a>
+             <a href="../views/HomeView.vue" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page" id="font" ><router-link to="/">Home</router-link></a>
  
-             <a href="../views/AboutView.vue" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"><router-link to="/AboutView">About us</router-link></a>
+             <a href="../views/AboutView.vue" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" id="font"><router-link to="/AboutView">About us</router-link></a>
  
-             <a href="../views/ContactUs.vue" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"><router-link to="/ContactUs">Contact us</router-link></a>
+             <a href="../views/ContactUs.vue" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" id="font"><router-link to="/ContactUs">Contact us</router-link></a>
  
-             <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Calendar</a>
+             <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"  id="font">Calendar</a>
            </div>
          </div>
        </div>
@@ -77,7 +76,7 @@
          </div>
        </div>
      </div>
-   </div>
+   
  
    <!-- Mobile menu, show/hide based on menu state. -->
    <div class="sm:hidden" id="mobile-menu">
@@ -103,7 +102,21 @@
  </script>
  
  <style>
+
    #icon{
-     height: 50px;
+     height: 70px;
    }
+
+   #links{
+    align-content: space-between;
+    gap: 3rem;
+    padding: 50px;
+    padding-left: 10rem;
+   }
+
+   #font{
+    font-size: 20px;
+    
+   }
+
  </style>
