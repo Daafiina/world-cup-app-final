@@ -25,7 +25,7 @@
        </div>
        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
          <div class="flex flex-shrink-0 items-center">
-           <img id="icon" class="hidden h-8 w-auto lg:block" src="../assets/img/world-cup.png" alt="Your Company">
+           <img id="icon" class="hidden h-8 w-auto lg:block" src="../assets/img/world-cup.png" alt="Your Company"><p class="Paragraf">FIFA</p>
          </div>
          <div class="hidden sm:ml-6 sm:block">
            <div class="flex space-x-4" id="links">
@@ -105,6 +105,7 @@
 
    #icon{
      height: 70px;
+     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    }
 
    #links{
@@ -117,6 +118,15 @@
    #font{
     font-size: 20px;
     
+   }
+
+  .Paragraf{
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 1.5rem;
+    font-weight: 100;
+    color:bisque;
+    position:absolute;
+    margin-left: 3.7rem;
    }
 
  </style>
