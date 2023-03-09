@@ -13,7 +13,7 @@ const routes = [
     }
   },
   {
-    path: '/about',
+    path: '/AboutView',
     name: 'about',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
@@ -32,6 +32,15 @@ const routes = [
     path:'/register',
     name:'register',
     component: () => import('../views/RegisterView.vue')
+  },
+
+  {
+    path: '/ContactUs',
+    name:'Contact us',
+    component: ()=>import('../views/ContactUs.vue'),
+    meta:{
+      requireAuth:true
+    }
   }
 
 ]
