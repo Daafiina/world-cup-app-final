@@ -11,7 +11,7 @@ import { onBeforeMount } from 'vue'
 import { useStore } from 'vuex'
 import HeaderComp from './components/HeaderComp.vue'
 // import FooterComp from './components/FooterComp.vue'
-
+// import BlogListComponent from'./components/BlogListComponent.vue';
 
 
 
@@ -19,6 +19,7 @@ export default {
   components:{
     HeaderComp,
     // FooterComp
+    // BlogListComponent
   },
   setup(){
     const store = useStore()

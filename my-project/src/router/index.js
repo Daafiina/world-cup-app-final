@@ -41,7 +41,12 @@ const routes = [
     meta:{
       requireAuth:true
     }
-  }
+  },
+  {
+    path:'/BlogListComponent',
+    name:'BlogListComponent',
+    component:()=>import('../components/BlogListComponent.vue')
+  },
 
 ]
 
