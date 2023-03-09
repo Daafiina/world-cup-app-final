@@ -25,19 +25,25 @@
        </div>
        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
          <div class="flex flex-shrink-0 items-center">
-           <img id="icon" class="hidden h-8 w-auto lg:block" src="../assets/img/world-cup.png" alt="Your Company"><p class="Paragraf">FIFA</p>
+           <img id="icon" class="hidden h-8 w-auto lg:block" src="../assets/img/world-cup.png" alt="Your Company">
+           <h1 class="title">{{ title }}</h1>
          </div>
          <div class="hidden sm:ml-6 sm:block">
            <div class="flex space-x-4" id="links">
-             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-             <a href="../views/HomeView.vue" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page" id="font" ><router-link to="/">Home</router-link></a>
+            <li class="navitems" v-for="item in navItems" v-bind:key="item.path">
+
+              <router-link v-bind:to="item.path" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page" id="font">{{ item.name }}</router-link>
+             <!-- Current: "bg-gra
+              y-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+             <!-- <a href="../views/HomeView.vue" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page" id="font" ><router-link to="/">Home</router-link></a>
  
              <a href="../views/AboutView.vue" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" id="font"><router-link to="/AboutView">About us</router-link></a>
  
              <a href="../views/ContactUs.vue" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" id="font"><router-link to="/ContactUs">Contact us</router-link></a>
  
-             <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"  id="font">Calendar</a>
-           </div>
+             <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"  id="font">Calendar</a> -->
+            </li>
+            </div>         
          </div>
        </div>
        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -97,6 +103,19 @@
  
  <script>
  export default {
+  data(){
+    return{
+      title:'FIFA',
+      navItems:[
+        {path: '/', name:'Home'},
+        {path:'/AboutView', name:'About'},
+        {path:'/Contactus', name:'Contact'},
+        {path:'/Create', name:'Create Post'}
+        
+      ]
+
+    }
+  },
    name: 'HeaderComp' 
  }
  </script>
@@ -120,13 +139,17 @@
     
    }
 
-  .Paragraf{
+  .title{
     font-family: "Lucida Console", "Courier New", monospace;
     font-size: 1.5rem;
     font-weight: 100;
     color:bisque;
     position:absolute;
     margin-left: 3.7rem;
+   }
+
+   .navitems{
+    list-style-type: none;
    }
 
  </style>
