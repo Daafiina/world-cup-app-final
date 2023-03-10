@@ -1,5 +1,6 @@
 const express = require('express')
 const bloguRoute = express.Router()
+const mongoose = require('mongoose');
 
 // model
 let bloguModel = require('../models/blogu')
@@ -46,14 +47,15 @@ bloguRoute.route('/').get((req, res, next) => {
 
 
 bloguRoute.route('/edit-blogu/:id').get((req, res, next) => {
-  bloguModel.findById(req.params.id, (error, data) => {
-    if (error) {
-      return next(error)
-    } else {
+  bloguModel.findById(req.params.id)
+    .then((data) => {
       res.json(data)
-    }
-  })
+    })
+    .catch((error) => {
+      return next(error)
+    })
 })
+
 
 // Update
 bloguRoute.route('/update-blogu/:id').put((req, res, next) => {

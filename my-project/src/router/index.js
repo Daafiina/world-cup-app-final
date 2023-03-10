@@ -47,7 +47,16 @@ const routes = [
     name:'BlogListComponent',
     component:()=>import('../components/BlogListComponent.vue')
   },
-
+  {
+    path:'/BlogCreateComponent',
+    name:'BlogCreateComponent',
+    component:()=>import('../components/BlogCreateComponent.vue')
+  },
+  {
+    path:'/BlogEditComponent',
+    name:'BlogEditComponent',
+    component:()=>import('../components/BlogEditComponent.vue')
+  }
 ]
 
 

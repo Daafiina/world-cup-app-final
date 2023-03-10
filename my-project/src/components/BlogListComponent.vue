@@ -14,26 +14,27 @@
                 </thead>
 
                 <tbody>
-                    <tr v-for="blog in blogus" :key="blog._id">
-                        <td>{{ blog.Titulli }}</td>
+                    <tr v-for="blog in blogu" :key="blog._id">
+                        <td>{{ blogu.Titulli }}</td>
                         <td>{{ blog.Foto }}</td>
                         <td>{{ blog.Autori }}</td>
                         <td>{{ blog.Permbajtja }}</td>
                         <td>{{ blog.DataPostimit }}</td>
                         <td>{{ blog.category }}</td>
-                        <td>
-              <router-link
-                :to="{ name: 'edit', params: { id: blog._id } }"
+                         <td>
+               <router-link
+                :to="{ name: 'BlogEditComponent', params: { id: blog._id } }"
                 class="btn btn-success"
                 >Edit
-              </router-link>
-              <!-- <button
-                @click.prevent="deleteBlogu(blog._id)"
+              </router-link> 
+         
+               <button
+                @click.prevent="deleteBlogus(blog._id)"
                 class="btn btn-danger"
               >
                 Delete
-              </button> -->
-            </td>
+              </button> 
+            </td> 
                     </tr>
                 </tbody>
             </table>
@@ -43,9 +44,7 @@
 
     </div>
 
-
 </template>
-
 
 
 
@@ -55,7 +54,7 @@ import axios from "axios";
 export default {
   data() {
     return {
-        blogus: [],
+      blogu: [],
     };
   },
   created() {
@@ -63,22 +62,23 @@ export default {
     axios
       .get(apiURL)
       .then((res) => {
-        this.blogus = res.data;
+        console.log(res.data);
+        this.blogu = res.data;
       })
       .catch((error) => {
         console.log(error);
       });
   },
   methods: {
-    deleteStudent(id) {
+    deleteBlogus(id) {
       let apiURL = `http://localhost:4000/api/delete-blogu/${id}`;
-      let indexOfArrayItem = this.blogus.findIndex((i) => i._id === id);
+      let indexOfArrayItem = this.blogu.findIndex((i) => i._id === id);
 
       if (window.confirm("Do you really want to delete?")) {
         axios
           .delete(apiURL)
           .then(() => {
-            this.blogus.splice(indexOfArrayItem, 1);
+            this.blogu.splice(indexOfArrayItem, 1);
           })
           .catch((error) => {
             console.log(error);
@@ -88,6 +88,7 @@ export default {
   },
 };
 </script>
+
 
 <style>
 .btn-success {
