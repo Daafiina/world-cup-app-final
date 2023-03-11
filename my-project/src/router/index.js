@@ -56,6 +56,11 @@ const routes = [
     path:'/BlogEditComponent',
     name:'BlogEditComponent',
     component:()=>import('../components/BlogEditComponent.vue')
+  },
+  {
+    path:'/LajmetQendrore',
+    name:'LajmetQendrore',
+    component:()=>import('../components/LajmetQendrore.vue')
   }
 ]
 
