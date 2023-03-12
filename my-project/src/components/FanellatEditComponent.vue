@@ -4,29 +4,29 @@
         <h3 class="text-center">Update Fanellat</h3>
         <form @submit.prevent="handleUpdateForm">
           <div class="form-group">
-            <label>Titulli</label>
+            <label>Foto</label>
             <input type="text" class="form-control" v-model="fanellat.Foto" required />
           </div>
   
           <div class="form-group">
-            <label>Foto</label>
-            <input type="string" class="form-control" v-model="fanella.Shteti" required />
+            <label>Shteti</label>
+            <input type="string" class="form-control" v-model="fanellat.Shteti" required />
           </div>
   
           <div class="form-group">
-            <label>Autori</label>
+            <label>Cmimi</label>
             <input type="text" class="form-control" v-model="fanellat.Cmimi" required />
           </div>
   
           <div class="form-group">
             <label>Madhesia</label>
-            <select class="form-control" v-model="fanellat.Madhesite" required>
+            <select class="form-control" v-model="fanellat.Madhesia" required>
               <option value="">Selekto Madhesine</option>
               <option value="S">S</option>
               <option value="M">M</option>
               <option value="L">L</option>
               <option value="XL">XL</option>
-              <option value="XL">XXL</option>
+              <option value="XXL">XXL</option>
             </select>
           </div>
   
@@ -39,10 +39,7 @@
             </select>
           </div>
   
-          <div class="form-group">
-            <label>Data Postimit</label>
-            <input type="text" class="form-control" v-model="fanellat.DataPostimit" required />
-          </div>
+         
   
           <div class="form-group">
             <button class="btn btn-danger btn-block">Update</button>

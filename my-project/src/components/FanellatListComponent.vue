@@ -23,11 +23,12 @@
                        
                          <td>
                <router-link
-                :to="{ FanellaEdit: 'FanellaEditComponent', params: { id: fanella._id } }"
+                :to="{ FanellaEditComponent: 'FanellaEditComponent', params: { id: fanella._id } }"
                 class="btn btn-success"
                 >Edit
               </router-link> 
-         
+             
+
                <button
                 @click.prevent="deletefanellat(fanella._id)"
                 class="btn btn-danger"

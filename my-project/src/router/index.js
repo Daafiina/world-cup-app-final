@@ -74,9 +74,15 @@ component:()=>import('../components/FanellatListComponent.vue')
 },
 { 
   path:'/FanellatEditComponent',
-  name:'FanellatEdit',
+  name:'FanellatEditComponent',
   component:()=>import('../components/FanellatEditComponent.vue')
-  }
+  },
+  { 
+    path:'/ShitjaFanellave',
+    name:'ShitjaFanellave',
+    component:()=>import('../components/ShitjaFanellave.vue')
+    }
+    
   
 ]
 
