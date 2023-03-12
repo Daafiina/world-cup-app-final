@@ -15,7 +15,7 @@
 
                 <tbody>
                     <tr v-for="fanella in fanellat" :key="fanella._id">
-                        <td>{{ fanellat.Foto }}</td>
+                        <td>{{ fanella.Foto }}</td>
                         <td>{{ fanella.Shteti }}</td>
                         <td>{{ fanella.Cmimi }}</td>
                         <td>{{ fanella.Madhesite }}</td>
@@ -23,13 +23,13 @@
                        
                          <td>
                <router-link
-                :to="{ name: 'FanellaEditComponent', params: { id: fanella._id } }"
+                :to="{ FanellaEdit: 'FanellaEditComponent', params: { id: fanella._id } }"
                 class="btn btn-success"
                 >Edit
               </router-link> 
          
                <button
-                @click.prevent="deletefanellat(fanellat._id)"
+                @click.prevent="deletefanellat(fanella._id)"
                 class="btn btn-danger"
               >
                 Delete

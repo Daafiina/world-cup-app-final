@@ -74,7 +74,7 @@ component:()=>import('../components/FanellatListComponent.vue')
 },
 { 
   path:'/FanellatEditComponent',
-  name:'FanellatEditComponent',
+  name:'FanellatEdit',
   component:()=>import('../components/FanellatEditComponent.vue')
   }
   
