@@ -15,19 +15,24 @@
 
                 <tbody>
                     <tr v-for="blog in blogu" :key="blog._id">
-                        <td>{{ blogu.Titulli }}</td>
+                        <td>{{ blog.Titulli }}</td>
                         <td>{{ blog.Foto }}</td>
                         <td>{{ blog.Autori }}</td>
                         <td>{{ blog.Permbajtja }}</td>
                         <td>{{ blog.DataPostimit }}</td>
                         <td>{{ blog.category }}</td>
                          <td>
-               <router-link
+               <!-- <router-link
                 :to="{ name: 'BlogEditComponent', params: { id: blog._id } }"
                 class="btn btn-success"
                 >Edit
-              </router-link> 
+              </router-link>  -->
          
+
+              <!-- TEST -->
+              <button class="inline-block p-3 text-gray-700 hover:bg-gray-50 hover:text-emerald-600 focus:relative"
+                      title="Edit Product" @click="editBlogu(blog._id)">Edit</button>
+
                <button
                 @click.prevent="deleteBlogus(blog._id)"
                 class="btn btn-danger"
@@ -71,7 +76,7 @@ export default {
   },
   methods: {
     deleteBlogus(id) {
-      let apiURL = `http://localhost:4000/api/delete-blogu/${id}`;
+      let apiURL = `api/delete-blogu/${id}`;
       let indexOfArrayItem = this.blogu.findIndex((i) => i._id === id);
 
       if (window.confirm("Do you really want to delete?")) {
@@ -84,6 +89,10 @@ export default {
             console.log(error);
           });
       }
+    },
+
+    editBlogu: function (id) {
+      this.$router.push(`api/BlogEditComponent/${id}`);
     },
   },
 };

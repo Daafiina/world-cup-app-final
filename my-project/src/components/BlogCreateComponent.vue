@@ -34,12 +34,11 @@
           </div>
           <div class="form-group">
             <label>Permbajtja</label>
-            <input
-              type="text"
-              class="form-control"
-              v-model="blogu.Permbajtja"
-              required
-            />
+            <textarea 
+  class="form-control"
+  v-model="blogu.Permbajtja"
+  required>
+</textarea>
           </div>
           <div class="form-group">
             <label>DataPostimit</label>
