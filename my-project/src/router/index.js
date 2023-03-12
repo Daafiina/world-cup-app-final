@@ -61,7 +61,23 @@ const routes = [
     path:'/LajmetQendrore',
     name:'LajmetQendrore',
     component:()=>import('../components/LajmetQendrore.vue')
+  },
+  { 
+  path:'/FanellatCreateComponent',
+  name:'FanellatCreateComponent',
+  component:()=>import('../components/FanellatCreateComponent.vue')
+},
+{ 
+path:'/FanellatListComponent',
+name:'FanellatListComponent',
+component:()=>import('../components/FanellatListComponent.vue')
+},
+{ 
+  path:'/FanellatEditComponent',
+  name:'FanellatEditComponent',
+  component:()=>import('../components/FanellatEditComponent.vue')
   }
+  
 ]
 
 
