@@ -111,6 +111,8 @@
         {path:'/AboutView', name:'About'},
         {path:'/Contactus', name:'Contact'},
         {path:'/BlogCreateComponent', name:'Create Blog'},
+        {path:'/LajmetQendrore', name:'Lajmet'},
+        {path:'/ShitjaFanellave', name:'Fanellat'},
         {path: '/create', name:' Create Team'},
         {path: '/FanellatCreateComponent', name:' Create Fanellat'},
       ]
@@ -130,13 +132,13 @@
 
    #links{
     align-content: space-between;
-    gap: 3rem;
+    gap: 2rem;
     padding: 50px;
     padding-left: 10rem;
    }
 
    #font{
-    font-size: 20px;
+    font-size: 14px;
     
    }
 
