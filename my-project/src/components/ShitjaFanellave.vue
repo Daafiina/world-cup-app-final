@@ -1,7 +1,7 @@
 <template>
     <div>
       <div class="row">
-        <div v-for="fanella in fanellat" :key="fanella._id" class="col-md-2">
+        <div v-for="fanella in fanellat" :key="fanella._id" class="col-md-3">
           <div class="card mb-4" style="background-color: #F5F5F5">
             <img class="card-img-top"  src="https://www.tfcfootball.com.my/wp-content/uploads/2022/09/DN0687-100.png" alt="Fanella">
             <div class="card-body">
@@ -28,7 +28,7 @@
       };
     },
     created() {
-      let apiURL = "http://localhost:5000/api";
+      let apiURL = "http://localhost:4000/api/fanellat";
       axios
         .get(apiURL)
         .then((res) => {

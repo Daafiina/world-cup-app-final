@@ -85,7 +85,7 @@
     },
     methods: {
       handleSubmitForm() {
-        let apiURL = "http://localhost:5000/api/create-fanellat";
+        let apiURL = "http://localhost:4000/api/create-fanellat";
   
         axios
           .post(apiURL, this.fanellat)
