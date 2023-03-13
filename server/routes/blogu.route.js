@@ -2,18 +2,11 @@ const express = require('express')
 const bloguRoute = express.Router()
 const mongoose = require('mongoose');
 
+
 // model
 let bloguModel = require('../models/blogu')
 
-// bloguRoute.route('/create-blogu').post((req, res, next) => {
-//   bloguModel.create(req.body, (error, data) => {
-//     if (error) {
-//       return next(error)
-//     } else {
-//       res.json(data)
-//     }
-//   })
-// })
+
 
 bloguRoute.route('/create-blogu').post((req, res, next) => {
   bloguModel.create(req.body)
@@ -25,15 +18,8 @@ bloguRoute.route('/create-blogu').post((req, res, next) => {
     });
 });
 
-// bloguRoute.route('/').get((req, res, next) => {
-//   bloguModel.find((error, data) => {
-//     if (error) {
-//       return next(error)
-//     } else {
-//       res.json(data)
-//     }
-//   })
-// })
+
+
 
 bloguRoute.route('/').get((req, res, next) => {
   bloguModel.find()

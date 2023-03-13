@@ -24,8 +24,17 @@ app.use(
 )
 app.use(cors())
 
+
+//New edit for test purpose
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+app.use(express.static("uploads"));
+
 // API
 app.use('/api', bloguAPI)
+//New edit for test purpose
+app.use("/api/post", require('./routes/Post.route'));
+
 
 // Create port
 const port = process.env.PORT || 4000
@@ -45,7 +54,3 @@ app.use(function (err, req, res, next) {
   res.status(err.statusCode).send(err.message)
 })
 
-//middleware 
-app.use(express.json());
-app.use(express.urlencoded({extended:true}));
-app.use(express.static("uploads"));
