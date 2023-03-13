@@ -81,7 +81,21 @@ component:()=>import('../components/FanellatListComponent.vue')
     path:'/ShitjaFanellave',
     name:'ShitjaFanellave',
     component:()=>import('../components/ShitjaFanellave.vue')
-    }
+    },
+
+    {
+      path: '/create',
+      name: 'Create',
+      component: () =>
+        import('../views/Create.vue'),
+    },
+    {
+      path: '/update/:id',
+      name: 'Update',
+      component: () =>
+        import( '../views/Update.vue'),
+    },
+   
     
   
 ]

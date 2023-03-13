@@ -16,6 +16,8 @@ mongoose
 
 const bloguAPI = require('../server/routes/blogu.route')
 const fanellatAPI = require('../server/routes/fanellat.route')
+const teamAPI=require('../server/routes/team.route')
+
 const app = express()
 app.use(bodyParser.json())
 app.use(
@@ -28,6 +30,7 @@ app.use(cors())
 // API
 app.use('/api', bloguAPI)
 app.use('/api', fanellatAPI)
+app.use('/team', teamAPI)
 
 // Create port
 const port = process.env.PORT || 4000
