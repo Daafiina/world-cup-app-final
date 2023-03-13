@@ -112,7 +112,7 @@
         {path:'/Contactus', name:'Contact'},
         {path:'/BlogCreateComponent', name:'Create Blog'},
         {path: '/create', name:' Create Team'},
-        
+        {path: '/FanellatCreateComponent', name:' Create Fanellat'},
       ]
 
     }
