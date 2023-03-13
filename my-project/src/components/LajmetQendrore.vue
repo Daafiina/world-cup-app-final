@@ -2,7 +2,7 @@
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col" v-for="blog in blogu" :key="blog._id">
       <div class="card h-100">
-        <img :src="blog.Foto" class="card-img-top" alt="...">
+        <img src="https://images.indianexpress.com/2022/12/FIFA-World-Cup-2022-finals.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{ blog.Titulli }}</h5>
           <p class="card-text">{{ blog.Permbajtja }}</p>
@@ -52,7 +52,7 @@ export default {
 }
 
 .card-img-top {
-  height: 200px;
+  height: 220px;
   object-fit: cover;
 }
 </style>
