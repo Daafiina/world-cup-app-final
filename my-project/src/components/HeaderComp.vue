@@ -26,23 +26,32 @@
        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
          <div class="flex flex-shrink-0 items-center">
            <img id="icon" class="hidden h-8 w-auto lg:block" src="../assets/img/world-cup.png" alt="Your Company">
-           <h1 class="title">{{ title }}</h1>
          </div>
-         <div class="hidden sm:ml-6 sm:block">
-           <div class="flex space-x-4" id="links">
-            <li class="navitems" v-for="item in navItems" v-bind:key="item.path">
+         <div id="navitems"  class="hidden sm:ml-6 sm:block">
+           <div class="flex space-x-4" id="links" >
+            <!-- <li class="navitems" v-for="item in navItems" v-bind:key="item.path">
 
-              <router-link v-bind:to="item.path" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page" id="font">{{ item.name }}</router-link>
-             <!-- Current: "bg-gra
+              <router-link v-bind:to="item.path"  class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page" id="font">{{ item.name }}</router-link> -->
+              <!-- Current: "bg-gra
               y-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-             <!-- <a href="../views/HomeView.vue" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page" id="font" ><router-link to="/">Home</router-link></a>
+              <li  v-if="user">
+              <router-link to="/">Home</router-link></li>
+              <li v-if="user">
+              <router-link to="/AboutView">About Us</router-link></li>
+              <li v-if="user">
+              <router-link to="/ContactUs">Contact us</router-link></li>
+              <li v-if="userRole == 'Admin' ">
+              <router-link to="/BlogListComponent">Lajmet</router-link></li>
+              
+
+             <!-- <a href="" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page" id="font" ><router-link to="/">Home</router-link></a>
  
              <a href="../views/AboutView.vue" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" id="font"><router-link to="/AboutView">About us</router-link></a>
  
              <a href="../views/ContactUs.vue" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" id="font"><router-link to="/ContactUs">Contact us</router-link></a>
  
-             <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"  id="font">Calendar</a> -->
-            </li>
+             <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"  id="font">Calendar</a>  -->
+            <!-- </li> -->
             </div>         
          </div>
        </div>
@@ -75,9 +84,8 @@
            -->
            <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
              <!-- Active: "bg-gray-100", Not Active: "" -->
-             <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
-             <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
-             <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2"> <button @click="$store.dispatch('logout')">Logout</button></a>
+             <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0" style="color:green">Your Profile<span class="nav-link active px-3">{{ user.email }} </span></a>
+             <button class="btn btn-danger px-3" @click="handleClick" style="paddding-top: 50px;">Logout</button>
            </div>
          </div>
        </div>
@@ -85,9 +93,9 @@
    
  
    <!-- Mobile menu, show/hide based on menu state. -->
-   <div class="sm:hidden" id="mobile-menu">
+   <!-- <div class="sm:hidden" id="mobile-menu">
      <div class="space-y-1 px-2 pt-2 pb-3">
-       <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" 
        <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
  
        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
@@ -96,31 +104,40 @@
  
        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
      </div>
-   </div>
+   </div> -->
  </nav>
  </template>
  
  
  <script>
- export default {
+import { useStore } from 'vuex'
+import { computed } from 'vue'
+
+export default {
   data(){
     return{
-      title:'FIFA',
-      navItems:[
-        {path: '/', name:'Home'},
-        {path:'/AboutView', name:'About'},
-        {path:'/Contactus', name:'Contact'},
-        {path:'/BlogCreateComponent', name:'Create Blog'},
-        {path:'/LajmetQendrore', name:'Lajmet'},
-        {path:'/ShitjaFanellave', name:'Fanellat'},
-        {path: '/create', name:' Create Team'},
-        {path: '/FanellatCreateComponent', name:' Create Fanellat'},
-      ]
+      userRole: localStorage.getItem('userRole')
+    }
+  },
+  setup() {
+    const store = useStore()
+    
 
+    const handleClick = () => {
+      store.dispatch('logout')
+    }
+
+
+
+    return {
+      handleClick,
+      user: computed(() => store.state.user),
+      authIsReady: computed(() => store.state.authIsReady)
     }
   },
    name: 'HeaderComp' 
  }
+ 
  </script>
  
  <style>
@@ -151,7 +168,7 @@
     margin-left: 3.7rem;
    }
 
-   .navitems{
+   #navitems{
     list-style-type: none;
    }
 
