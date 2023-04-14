@@ -23,13 +23,10 @@
                         <td>{{ blog.category }}</td>
                          <td>
                 <router-link
-                :to="{ name: 'BlogEditComponent', params: { id: blogu._id } }"
+                :to="{ name: 'BlogEditComponent', params: { id: blog._id } }"
                 class="btn btn-success"
                 >Edit
               </router-link>  
-         
-
- 
 
                <button
                 @click.prevent="deleteBlogus(blog._id)"
@@ -61,7 +58,8 @@ export default {
     };
   },
   created() {
-    let apiURL = "http://localhost:4000/api";
+    let apiURL = "http://localhost:4000/api/get-blogu";
+
     axios
       .get(apiURL)
       .then((res) => {

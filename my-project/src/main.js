@@ -6,5 +6,6 @@ import './assets/style.css'
 import './firebase'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
+import '@mdi/font/css/materialdesignicons.css'
 
 createApp(App).use(store).use(router).mount('#app')

@@ -80,13 +80,15 @@
         blogu: {},
       };
     },
-    created() {
-        let apiURL = `http://localhost:4000/api/edit-blogu/${this.$route.params.id}`;
-      axios.get(apiURL).then((res) => {
-        console.log(res.data);
-        this.blogu = res.data;
+    async created() {
+         let apiURL = `http://localhost:4000/api/edit-blogu/${this.$route.params.id}`;
+       axios.get(apiURL).then((res) => {
+         console.log(res.data);
+         this.blogu = res.data;
         
-      });
+       });
+
+     
     },
     methods: {
       handleUpdateForm() {

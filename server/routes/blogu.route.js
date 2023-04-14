@@ -21,7 +21,7 @@ bloguRoute.route('/create-blogu').post((req, res, next) => {
 
 
 
-bloguRoute.route('/').get((req, res, next) => {
+bloguRoute.route('/get-blogu').get((req, res, next) => {
   bloguModel.find()
     .then((data) => {
       res.json(data);

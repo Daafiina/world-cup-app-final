@@ -110,7 +110,7 @@
         {path: '/', name:'Home'},
         {path:'/AboutView', name:'About'},
         {path:'/Contactus', name:'Contact'},
-        {path:'/BlogCreateComponent', name:'Create Blog'}
+        {path:'/AddPost', name:'Create Post'}
         
       ]
 

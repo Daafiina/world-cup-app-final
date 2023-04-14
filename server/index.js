@@ -4,6 +4,12 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const createError = require('http-errors')
 
+const app = express();
+//edited
+app.use(express.json());
+app.use(express.static("uploads"));
+app.use(cors())
+app.use(express.urlencoded({extended:true}))
 // Connect mongoDB
 mongoose
   .connect('mongodb://127.0.0.1:27017/World-Cup-App-Final')
@@ -14,15 +20,16 @@ mongoose
     console.error('Error connecting to mongo', err.reason)
   })
 
-const bloguAPI = require('../server/routes/blogu.route')
-const app = express()
+const bloguAPI = require('../server/routes/blogu.route');
+app.use("/api/post", require("../server/routes/Post.route"));
+
+
 app.use(bodyParser.json())
 app.use(
   bodyParser.urlencoded({
     extended: false,
   }),
 )
-app.use(cors())
 
 // API
 app.use('/api', bloguAPI)

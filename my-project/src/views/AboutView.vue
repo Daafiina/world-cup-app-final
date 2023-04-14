@@ -30,9 +30,10 @@
         <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, commodi sint. <br>Ipsam molestias
             nemovel laboriosam consequatur, perferendis<br> minima soluta? Natus necessitatibus autem suscipit!</p>
         <div class="num-container">
-            <div class="num-item"><span>27,882 <br>Customers</span></div>
-            <div class="num-item"><span>90% <br>satisfied customers</span></div>
-            <div class="num-item"><span>70,592 <br>tickets sold</span></div>
+            <div class="num-item"><img src="https://cdn-icons-png.flaticon.com/512/2673/2673061.png" class="fotoCust">
+<span>27,882 <br>Customers</span></div>
+            <div class="num-item"><img src="https://cdn-icons-png.flaticon.com/512/9358/9358502.png" alt="" style="width:61px;margin-left:66px"><span>90% <br>satisfied customers</span></div>
+            <div class="num-item"><img src="https://cdn-icons-png.flaticon.com/512/9031/9031828.png" style="width:61px;margin-left:30px"><span>70,592 <br>tickets sold</span></div>
         </div>
     </section>
     <!--================== Workflow Section Ends Here -->
@@ -50,7 +51,7 @@
                 <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, atque!</li>
                 <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, atque!</li>
             </ul>
-            <a href="" class="btn"> Contact Us</a>
+            <a href="" class="btn2"> Contact Us</a>
         </div>
         <div class="goal-right">
             <img src="https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
@@ -63,22 +64,22 @@
         <h2>Our Team</h2>
         <div class="teamContainer">
             <div class="team-item">
-                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0vSJ2farrYY7wFegsGsRBpqb5E5jjeQVLwshPLGP6fGzkC2m-Eo_gNhZUN0DIRioAY8E&usqp=CAU" alt=""> 
+                 <img src="https://www.svgrepo.com/show/382096/female-avatar-girl-face-woman-user.svg" alt=""> 
                 <h5 class="member-name">Dafina Aliji</h5>
                 <span class="role">Developer</span>
             </div>
             <div class="team-item">
-                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJbM1sKRHlT8AroSFkNAmAT4fCrvcBOqCUXX_e1YF45ZjkBnqYDKz7AmqZblmAlZALabY&usqp=CAU" alt=""> 
+                 <img src="https://www.svgrepo.com/show/382105/male-avatar-boy-face-man-user-5.svg" alt=""> 
                 <h5 class="member-name">Bleart Merovci</h5>
                 <span class="role">Journal</span>
             </div>
             <div class="team-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0vSJ2farrYY7wFegsGsRBpqb5E5jjeQVLwshPLGP6fGzkC2m-Eo_gNhZUN0DIRioAY8E&usqp=CAU" alt=""> 
+                <img src="https://www.svgrepo.com/show/382096/female-avatar-girl-face-woman-user.svg" alt=""> 
                 <h5 class="member-name">Mirjeta Rexhepi</h5>
                 <span class="role">Journal</span>
             </div>
             <div class="team-item">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJbM1sKRHlT8AroSFkNAmAT4fCrvcBOqCUXX_e1YF45ZjkBnqYDKz7AmqZblmAlZALabY&usqp=CAU" alt=""> 
+              <img src="https://www.svgrepo.com/show/382105/male-avatar-boy-face-man-user-5.svg" alt=""> 
                 <h5 class="member-name">Jetmir Demiri</h5>
                 <span class="role">Developer</span>
             </div>
@@ -115,8 +116,8 @@ header::before {
     width: 100%;
     height: 100%;
     background-image: url(https://media.istockphoto.com/id/698848166/photo/confederations-cup-golden-trophy-in-the-form-of-the-globe-2017-3d-render.jpg?s=612x612&w=0&k=20&c=wa-h1Qu93VNhEDl5vQsHgSpXrPUnFLGkvBFbYIAhCNg=); 
-    background-position: bottom;
-    background-size: cover;
+    background-position: center;
+    background-size: contain;
     opacity: 0.8;
     z-index: -1;
 }
@@ -193,7 +194,7 @@ header::after {
 }
 
 .home-left img {
-    height: 100%;
+    height: 140%;
     border-radius: 10px;
 }
 
@@ -212,12 +213,22 @@ header::after {
 
 .btn {
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: bold;
     position: relative;
-    width: 0;
+    background-color: #1f2937;
+    padding:5px;
+    font-weight: 300;
 }
-
+a.btn2 {
+    margin-right: 38REM;
+    background-color: #1f2937;
+    text-decoration: none;
+    color: white;
+    font-family: Rubik;
+    padding: 12px;
+    border-radius: 3px;
+}
 .btn:hover::after {
     content: '';
     height: 4px;
@@ -249,6 +260,9 @@ header::after {
     flex-direction: column;
     text-align: center;
     margin-bottom: 4rem;
+    background-color: rgb(228, 227, 227);
+    padding-top: 50px;
+    padding-bottom:50px;
 }
 
 .heading {
@@ -260,6 +274,11 @@ header::after {
     margin: 1rem auto;
 }
 
+img.fotoCust {
+    width: 52px;
+    margin-left: 33px;
+    margin-bottom: 10px;
+}
 .num-container {
     width: 70%;
     margin: 1rem auto;
@@ -328,9 +347,12 @@ header::after {
 }
 
 /* Our Team */
-#our-Team {
-    width: 80%;
+#our-Team[data-v-4cebd208] {
+    /* width: 80%; */
     margin: 4rem auto 1rem;
+    background-color: #e4e3e3;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 #our-Team h2 {

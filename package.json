@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@mdi/font": "^7.2.96",
     "mongoose-auto-increment": "^5.0.1",
     "worldcup.js": "^1.2.8"
   },
