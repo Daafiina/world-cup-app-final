@@ -86,7 +86,6 @@ component:()=>import('../components/FanellatListComponent.vue')
     name:'ShitjaFanellave',
     component:()=>import('../components/ShitjaFanellave.vue')
     },
-<<<<<<< HEAD
     {
       path:'/AddPost',
       name:"add-post",
@@ -106,8 +105,7 @@ component:()=>import('../components/FanellatListComponent.vue')
       path:'/edit-post/:id',
       name:"edit-post",
       component:()=>import('../views/EditPost.vue')
-    }
-=======
+    },
 
     {
       path: '/create',
@@ -122,7 +120,6 @@ component:()=>import('../components/FanellatListComponent.vue')
         import( '../views/Update.vue'),
     },
    
->>>>>>> 6e3eee412d46b5e524931645e73f7b89fe998186
     
     
     
