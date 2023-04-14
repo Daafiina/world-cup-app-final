@@ -21,16 +21,17 @@ export default {
     // FooterComp
     // BlogListComponent
   },
-  setup(){
-    const store = useStore()
+}
+  // setup(){
+  //   const store = useStore()
 
-    onBeforeMount(()=>{
-      store.dispatch('fetchUser')
-    })
-    // return{
-    //   user:store.state.user
-    }
-  }
+  //   onBeforeMount(()=>{
+  //     store.dispatch('fetchUser')
+  //   })
+  //   // return{
+  //   //   user:store.state.user
+  //   }
+  // }
 
 
 </script>

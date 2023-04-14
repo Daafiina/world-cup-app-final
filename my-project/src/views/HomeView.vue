@@ -1,4 +1,5 @@
 <template lang="">
+  <TeamList/>
   <div>
       <br>
       <br>
@@ -152,9 +153,15 @@
 
   </div>
 </template>
+
+
 <script>
+import TeamList from '../components/TeamList.vue'
+
 export default {
-  
+  components: {
+    TeamList,
+  },
 }
 </script>
 <style lang="">

@@ -59,7 +59,7 @@
       };
     },
     created() {
-      let apiURL = `http://localhost:5000/api/edit-fanellat/${this.$route.params.id}`;
+      let apiURL = `http://localhost:4000/api/edit-fanellat/${this.$route.params.id}`;
       axios.get(apiURL).then((res) => {
         console.log(res.data);
         this.fanellat = res.data;
@@ -67,7 +67,7 @@
     },
     methods: {
       handleUpdateForm() {
-        let apiURL = `http://localhost:5000/api/update-fanellat/${this.$route.params.id}`;
+        let apiURL = `http://localhost:4000/api/update-fanellat/${this.$route.params.id}`;
   
         axios
           .put(apiURL, this.fanellat)

@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import { auth } from  '../firebase'
+import {auth} from '../firebase'
 
 
 const routes = [
@@ -8,8 +8,8 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView,
-    meta:{
-      requireAuth:true
+     meta:{
+      requiresAuth:true
     }
   },
   {
@@ -20,8 +20,9 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
     meta:{
-      requireAuth:true
+      requiresAuth:true
     }
+
   },
   {
     path:'/login',
@@ -39,14 +40,17 @@ const routes = [
     name:'Contact us',
     component: ()=>import('../views/ContactUs.vue'),
     meta:{
-      requireAuth:true
+      requiresAuth:true
     }
   },
   {
     path:'/BlogListComponent',
     name:'BlogListComponent',
-    component:()=>import('../components/BlogListComponent.vue')
+    component:()=>import('../components/BlogListComponent.vue'),
+    meta: { requiresAuth: true, roles: ['Admin']}
   },
+  
+  
   {
     path:'/BlogCreateComponent',
     name:'BlogCreateComponent',
@@ -82,6 +86,7 @@ component:()=>import('../components/FanellatListComponent.vue')
     name:'ShitjaFanellave',
     component:()=>import('../components/ShitjaFanellave.vue')
     },
+<<<<<<< HEAD
     {
       path:'/AddPost',
       name:"add-post",
@@ -102,6 +107,22 @@ component:()=>import('../components/FanellatListComponent.vue')
       name:"edit-post",
       component:()=>import('../views/EditPost.vue')
     }
+=======
+
+    {
+      path: '/create',
+      name: 'Create',
+      component: () =>
+        import('../views/Create.vue'),
+    },
+    {
+      path: '/update/:id',
+      name: 'Update',
+      component: () =>
+        import( '../views/Update.vue'),
+    },
+   
+>>>>>>> 6e3eee412d46b5e524931645e73f7b89fe998186
     
     
     
@@ -109,24 +130,34 @@ component:()=>import('../components/FanellatListComponent.vue')
 ]
 
 
-
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
+  history: createWebHistory(),
+  routes,
+});
+
+
+const userId = localStorage.getItem('userId')
+const userRole = localStorage.getItem('userRole')
+
+
+router.beforeEach((to) => {
+  if (to.matched.some(record => record.meta.requiresAuth)){
+    const roles = to.meta.roles || ''
+
+    if (userId == null) {
+      router.push('/login')
+    }
+    else if(roles == ''){
+      return;
+    }
+    else if (!roles.includes(userRole)){
+      alert("Access denied! You'll be redirected to homepage")
+      router.push('/')}
+    else{
+      return;
+    }
+
+}
 })
 
-router.beforeEach((to,from,next)=>{
-  if(to.path=== '/login' && auth.currentUser){
-    next('/')
-    return;
-  }
-  if(to.matched.some(record => record.meta.requireAuth)&& !auth.currentUser){
-    next('/login')
-    return;
-  }
-
-  next();
-
-})
-
-export default router
+export default router;

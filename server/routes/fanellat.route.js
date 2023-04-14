@@ -35,7 +35,7 @@ fanellatRoute.route('/create-fanellat').post((req, res, next) => {
 //   })
 // })
 
-fanellatRoute.route('/').get((req, res, next) => {
+fanellatRoute.route('/fanellat').get((req, res, next) => {
   fanellatModel.find()
     .then((data) => {
       res.json(data);

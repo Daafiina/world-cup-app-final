@@ -59,7 +59,7 @@ export default {
     };
   },
   created() {
-    let apiURL = "http://localhost:5000/api";
+    let apiURL = "http://localhost:4000/api/fanellat";
     axios
       .get(apiURL)
       .then((res) => {
@@ -72,7 +72,7 @@ export default {
   },
   methods: {
     deletefanellat(id) {
-      let apiURL = `http://localhost:5000/api/delete-fanellat/${id}`;
+      let apiURL = `http://localhost:4000/api/delete-fanellat/${id}`;
       let indexOfArrayItem = this.fanellat.findIndex((i) => i._id === id);
 
       if (window.confirm("Do you really want to delete?")) {

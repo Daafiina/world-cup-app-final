@@ -2,9 +2,7 @@
     <main>
 
         <header>
-        <nav class="navbar">
-           
-        </nav>
+       
         <h1 class="h1shi">About Us</h1>
     </header>
     <!--================== Header Section Ends Here -->

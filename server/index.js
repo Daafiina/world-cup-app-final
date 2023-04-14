@@ -20,10 +20,18 @@ mongoose
     console.error('Error connecting to mongo', err.reason)
   })
 
+<<<<<<< HEAD
 const bloguAPI = require('../server/routes/blogu.route');
 app.use("/api/post", require("../server/routes/Post.route"));
 
 
+=======
+const bloguAPI = require('../server/routes/blogu.route')
+const fanellatAPI = require('../server/routes/fanellat.route')
+const teamAPI=require('../server/routes/team.route')
+
+const app = express()
+>>>>>>> 6e3eee412d46b5e524931645e73f7b89fe998186
 app.use(bodyParser.json())
 app.use(
   bodyParser.urlencoded({
@@ -33,6 +41,8 @@ app.use(
 
 // API
 app.use('/api', bloguAPI)
+app.use('/api', fanellatAPI)
+app.use('/team', teamAPI)
 
 // Create port
 const port = process.env.PORT || 4000
