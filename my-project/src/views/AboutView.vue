@@ -41,7 +41,7 @@
     <section id="goal">
         <div class="goal-left">
             <h2>Our Goal</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore omnis obcaecati incidunt asperiores,
+            <p>Lorem isum dolor sit amet consectetur adipisicing elit. Labore omnis obcaecati incidunt asperiores,
                 mollitia quibusdam velit at itaque sunt, culpa in pariatur quas, temporibus repellendus vitae! Vitae,
                 illum asperiores.</p>
             <ul>

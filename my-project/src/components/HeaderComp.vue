@@ -116,7 +116,6 @@ import { computed } from 'vue'
 export default {
   data(){
     return{
-<<<<<<< HEAD
       title:'FIFA',
       navItems:[
         {path: '/', name:'Home'},
@@ -124,15 +123,13 @@ export default {
         {path:'/Contactus', name:'Contact'},
         {path:'/AddPost', name:'Create Post'}
         
-      ]
-=======
+      ],
       userRole: localStorage.getItem('userRole')
     }
   },
   setup() {
     const store = useStore()
     
->>>>>>> 6e3eee412d46b5e524931645e73f7b89fe998186
 
     const handleClick = () => {
       store.dispatch('logout')
