@@ -40,8 +40,7 @@
               <router-link to="/AboutView">About Us</router-link></li>
               <li v-if="user">
               <router-link to="/ContactUs">Contact us</router-link></li>
-              <li v-if="userRole == 'Admin' ">
-              <router-link to="/BlogListComponent">Lajmet</router-link></li>
+              
               
 
              <!-- <a href="" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page" id="font" ><router-link to="/">Home</router-link></a>
