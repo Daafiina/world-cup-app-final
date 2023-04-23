@@ -3,7 +3,7 @@ import axios from "axios";
 const url1 = "http://127.0.0.1:4000/api/post/get-post-byID";
 const url2 = "http://127.0.0.1:4000/api/post/create-post";
 const url3 = "http://127.0.0.1:4000/api/post/update-post";
-const url4="http://127.0.0.1:4000/api/post/delete-post";
+const url4 = "http://127.0.0.1:4000/api/post/delete-post";
 export default class API{
     //get all posts from server
     static async getAllPost(){

@@ -26,6 +26,7 @@ app.use("/api/post", require("../server/routes/Post.route"));
 
 const fanellatAPI = require('../server/routes/fanellat.route')
 const teamAPI=require('../server/routes/team.route')
+const contactAPI=require('../server/routes/contact.route')
 
 app.use(bodyParser.json())
 app.use(
@@ -38,6 +39,7 @@ app.use(
 app.use('/api', bloguAPI)
 app.use('/api', fanellatAPI)
 app.use('/team', teamAPI)
+app.use('/api', contactAPI)
 
 // Create port
 const port = process.env.PORT || 4000

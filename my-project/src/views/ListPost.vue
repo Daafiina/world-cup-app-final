@@ -55,7 +55,7 @@ export default {
     name:"ListPost",
     data(){
         return{
-            posts:[],
+          posts:[],
         };
     },
     async created(){
