@@ -3,35 +3,35 @@
 
         <header>
        
-        <h1 class="h1shi">About Us</h1>
+        <h1 className="h1shi">About Us</h1>
     </header>
     <!--================== Header Section Ends Here -->
 
 
     <!--================== Home Section Starts from Here ==================-->
     <section id="home">
-        <div class="home-left">
+        <div className="home-left">
             <img src="https://images.pexels.com/photos/15348246/pexels-photo-15348246.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" style="width:130%;">
         </div>
-        <div class="home-right">
-            <h2 class="home-heading"> Get the latest news of world cup here </h2>
-            <p class="home-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quibusdam blanditiis
+        <div className="home-right">
+            <h2 className="home-heading"> Get the latest news of world cup here </h2>
+            <p className="home-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quibusdam blanditiis
                 quas assumenda nam error vel dolores suscipit ad, sapiente deleniti ipsum, obcaecati perspiciatis.</p>
-            <a href="" class="btn"> Our Work</a>
+            <a href="" className="btn"> Our Work</a>
         </div>
     </section>
     <!--================== Home Section Ends Here -->
 
     <!--================== Workflow Section Starts from Here ==================-->
     <section id="workFlow">
-        <h2 class="heading"> Buy tickets and shirts here </h2>
-        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, commodi sint. <br>Ipsam molestias
+        <h2 className="heading"> Buy tickets and shirts here </h2>
+        <p className="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, commodi sint. <br>Ipsam molestias
             nemovel laboriosam consequatur, perferendis<br> minima soluta? Natus necessitatibus autem suscipit!</p>
-        <div class="num-container">
-            <div class="num-item"><img src="https://cdn-icons-png.flaticon.com/512/2673/2673061.png" class="fotoCust">
+        <div className="num-container">
+            <div className="num-item"><img src="https://cdn-icons-png.flaticon.com/512/2673/2673061.png" className="fotoCust">
 <span>27,882 <br>Customers</span></div>
-            <div class="num-item"><img src="https://cdn-icons-png.flaticon.com/512/9358/9358502.png" alt="" style="width:61px;margin-left:66px"><span>90% <br>satisfied customers</span></div>
-            <div class="num-item"><img src="https://cdn-icons-png.flaticon.com/512/9031/9031828.png" style="width:61px;margin-left:30px"><span>70,592 <br>tickets sold</span></div>
+            <div className="num-item"><img src="https://cdn-icons-png.flaticon.com/512/9358/9358502.png" alt="" style="width:61px;margin-left:66px"><span>90% <br>satisfied customers</span></div>
+            <div className="num-item"><img src="https://cdn-icons-png.flaticon.com/512/9031/9031828.png" style="width:61px;margin-left:30px"><span>70,592 <br>tickets sold</span></div>
         </div>
     </section>
     <!--================== Workflow Section Ends Here -->
@@ -39,7 +39,7 @@
 
     <!--================== Goal Section Starts from Here ==================-->
     <section id="goal">
-        <div class="goal-left">
+        <div className="goal-left">
             <h2>Our Goal</h2>
             <p>Lorem isum dolor sit amet consectetur adipisicing elit. Labore omnis obcaecati incidunt asperiores,
                 mollitia quibusdam velit at itaque sunt, culpa in pariatur quas, temporibus repellendus vitae! Vitae,
@@ -49,9 +49,9 @@
                 <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, atque!</li>
                 <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, atque!</li>
             </ul>
-            <a href="" class="btn2"> Contact Us</a>
+            <a href="" className="btn2"> Contact Us</a>
         </div>
-        <div class="goal-right">
+        <div className="goal-right">
             <img src="https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
         </div>
     </section>
@@ -60,26 +60,26 @@
     <!--================== Our Team Section Starts from Here ==================-->
     <section id="our-Team">
         <h2>Our Team</h2>
-        <div class="teamContainer">
-            <div class="team-item">
+        <div className="teamContainer">
+            <div className="team-item">
                  <img src="https://www.svgrepo.com/show/382096/female-avatar-girl-face-woman-user.svg" alt=""> 
-                <h5 class="member-name">Dafina Aliji</h5>
-                <span class="role">Developer</span>
+                <h5 className="member-name">Dafina Aliji</h5>
+                <span className="role">Developer</span>
             </div>
-            <div class="team-item">
+            <div className="team-item">
                  <img src="https://www.svgrepo.com/show/382105/male-avatar-boy-face-man-user-5.svg" alt=""> 
-                <h5 class="member-name">Bleart Merovci</h5>
-                <span class="role">Journal</span>
+                <h5 className="member-name">Bleart Merovci</h5>
+                <span className="role">Journal</span>
             </div>
-            <div class="team-item">
+            <div className="team-item">
                 <img src="https://www.svgrepo.com/show/382096/female-avatar-girl-face-woman-user.svg" alt=""> 
-                <h5 class="member-name">Mirjeta Rexhepi</h5>
-                <span class="role">Journal</span>
+                <h5 className="member-name">Mirjeta Rexhepi</h5>
+                <span className="role">Journal</span>
             </div>
-            <div class="team-item">
+            <div className="team-item">
               <img src="https://www.svgrepo.com/show/382105/male-avatar-boy-face-man-user-5.svg" alt=""> 
-                <h5 class="member-name">Jetmir Demiri</h5>
-                <span class="role">Developer</span>
+                <h5 className="member-name">Jetmir Demiri</h5>
+                <span className="role">Developer</span>
             </div>
            
         </div>
