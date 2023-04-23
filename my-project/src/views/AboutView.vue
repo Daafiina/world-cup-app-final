@@ -14,8 +14,8 @@
             <img src="https://images.pexels.com/photos/15348246/pexels-photo-15348246.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" style="width:130%;">
         </div>
         <div className="home-right">
-            <h2 className="home-heading"> Get the latest news of world cup here </h2>
-            <p className="home-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quibusdam blanditiis
+            <h2 className="home-heading" style="font-size:40px; font-weight: 600;"> Get the latest news of world cup here </h2>
+            <p className="home-para" style="font-size:20px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quibusdam blanditiis
                 quas assumenda nam error vel dolores suscipit ad, sapiente deleniti ipsum, obcaecati perspiciatis.</p>
             <a href="" className="btn"> Our Work</a>
         </div>
@@ -118,6 +118,7 @@ header::before {
     background-size: contain;
     opacity: 0.8;
     z-index: -1;
+    margin-top: -6REM;
 }
 
 header::after {
@@ -132,6 +133,7 @@ header::after {
     background-size: cover;
     background-color: black;
     background-position: bottom;
+    margin-top: -6REM;
 }
 
 .navbar {
@@ -503,7 +505,11 @@ h1.h1shi {
     color: white;
     margin-top: 7%;
     font-size: 5REM;
-}.goal-left h2[data-v-4cebd208] {
+    padding-top: 5REM;
+
+}
+
+.goal-left h2[data-v-4cebd208] {
     font-size: 2.4rem;
     text-align: left;
 }

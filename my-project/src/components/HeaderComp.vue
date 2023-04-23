@@ -40,6 +40,14 @@
               <router-link to="/AboutView">About Us</router-link></li>
               <li v-if="user">
               <router-link to="/ContactUs">Contact us</router-link></li>
+              <router-link v-if="isUser" to="/ListPost">Lajmet</router-link>
+
+
+              <router-link v-if="isAdmin" to="/AddPost">Shto Lajme</router-link>
+
+
+              <li v-if="isUser"><router-link to="/user">User Page</router-link></li>
+
               
               
 
@@ -51,6 +59,8 @@
  
              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"  id="font">Calendar</a>  -->
             <!-- </li> -->
+         
+
             </div>         
          </div>
        </div>
@@ -84,6 +94,9 @@
            <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
              <!-- Active: "bg-gray-100", Not Active: "" -->
              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0" style="color:green">Your Profile<span class="nav-link active px-3">{{ user.email }} </span></a>
+             <p v-if="isUser" style="color:red">Role: User</p>
+             <p v-if="isAdmin" style="color:red;">Role: Admin</p>
+
              <button class="btn btn-danger px-3" @click="handleClick" style="paddding-top: 50px;">Logout</button>
            </div>
          </div>
@@ -126,6 +139,15 @@ export default {
       userRole: localStorage.getItem('userRole')
     }
   },
+  computed: {
+  isAdmin() {
+    return this.$store.state.userRole === 'Admin'
+  },
+  isUser() {
+    return this.$store.state.userRole === 'User'
+  }
+},
+
   setup() {
     const store = useStore()
     
@@ -178,5 +200,13 @@ export default {
    #navitems{
     list-style-type: none;
    }
-
+   nav a {
+    font-weight: 500 !important;
+    color: white ;
+    text-decoration: none !important;
+    font-family: rubik !important;
+}
+nav a:active{
+  color: red !important;
+}
  </style>
