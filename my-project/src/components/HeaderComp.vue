@@ -34,16 +34,17 @@
               <router-link v-bind:to="item.path"  class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page" id="font">{{ item.name }}</router-link> -->
               <!-- Current: "bg-gra
               y-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <li  v-if="user">
+              <li  v-if="isUser">
               <router-link to="/">Home</router-link></li>
-              <li v-if="user">
+              <li v-if="isUser">
               <router-link to="/AboutView">About Us</router-link></li>
-              <li v-if="user">
+              <li v-if="isUser">
               <router-link to="/ContactUs">Contact us</router-link></li>
               <router-link v-if="isUser" to="/ListPost">Lajmet</router-link>
 
 
               <router-link v-if="isAdmin" to="/AddPost">Shto Lajme</router-link>
+              <router-link v-if="isAdmin" to="/users">Users</router-link>
 
 
               <li v-if="isUser"><router-link to="/user">User Page</router-link></li>
@@ -128,14 +129,15 @@ import { computed } from 'vue'
 export default {
   data(){
     return{
-      title:'FIFA',
-      navItems:[
-        {path: '/', name:'Home'},
-        {path:'/AboutView', name:'About'},
-        {path:'/Contactus', name:'Contact'},
-        {path:'/AddPost', name:'Create Post'}
+      // title:'FIFA',
+      // navItems:[
+      //   {path: '/', name:'Home'},
+      //   {path:'/AboutView', name:'About'},
+      //   {path:'/Contactus', name:'Contact'},
+      //   {path:'/AddPost', name:'Create Post'},
+      //   {path:'/users', name:'Users'}
         
-      ],
+      // ],
       userRole: localStorage.getItem('userRole')
     }
   },

@@ -75,7 +75,7 @@ export default {
           password: password.value,
           pickedRole: pickedRole.value
         })
-        router.push('/')
+        this.$router.push(localStorage.getItem('/'));
       }
       catch (err) {
         error.value = err.message

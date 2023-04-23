@@ -118,6 +118,13 @@ component:()=>import('../components/FanellatListComponent.vue')
       component: () =>
         import( '../views/Update.vue'),
     },
+    {
+      path: '/users',
+      name: 'Users',
+      component: () =>
+        import( '../components/UsersManage.vue'),
+    },
+  
    
     
     

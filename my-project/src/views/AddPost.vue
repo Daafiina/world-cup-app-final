@@ -55,6 +55,9 @@
                 <input type="file" id="image" @change="selectFile" class="form-control" multiple>
               </div>
               <button type="submit" class="btn btn-primary mt-3">Add Post</button>
+              <div class="form-outline mb-4">
+               <a href="/ListPost" style="padding-left:85%">All posts</a>
+              </div>
             </form>
           </div>
         </div>

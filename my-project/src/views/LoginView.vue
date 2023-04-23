@@ -74,7 +74,7 @@ export default {
           email: email.value,
           password: password.value
         })
-        router.push('/')
+        this.router.push(localStorage.getItem('/'));
       }
       catch (err) {
         error.value = err.message
