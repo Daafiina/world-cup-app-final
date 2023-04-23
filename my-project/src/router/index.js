@@ -38,6 +38,9 @@ const routes = [
     path: '/ContactUs',
     name:'Contact us',
     component: ()=>import('../views/Home/Contact.vue'),
+    meta:{
+      requiresAuth:true
+    }
   },
 
 
@@ -92,17 +95,21 @@ component:()=>import('../components/FanellatListComponent.vue')
     {
       path:'/ListPost',
       name:"ListPost",
-      component:()=>import('../views/ListPost.vue')
+      component:()=>import('../views/ListPost.vue'),
+      meta: { requiresAuth: true}
     },
     {
       path:'/post/:id',
       name:"post",
-      component:()=>import('../views/SinglePost.vue')
+      component:()=>import('../views/SinglePost.vue'),
+      meta: { requiresAuth: true, roles: ['Admin']}
+
     },
     {
       path:'/edit-post/:id',
       name:"edit-post",
-      component:()=>import('../views/EditPost.vue')
+      component:()=>import('../views/EditPost.vue'),
+      meta: { requiresAuth: true, roles: ['Admin']}
     },
 
     {
@@ -122,6 +129,8 @@ component:()=>import('../components/FanellatListComponent.vue')
       name: 'Users',
       component: () =>
         import( '../components/UsersManage.vue'),
+        meta: { requiresAuth: true, roles: ['Admin']}
+
     },
   
    
