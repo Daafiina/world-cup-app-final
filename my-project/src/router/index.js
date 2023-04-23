@@ -33,15 +33,14 @@ const routes = [
     name:'register',
     component: () => import('../views/RegisterView.vue')
   },
-
+  
   {
     path: '/ContactUs',
     name:'Contact us',
-    component: ()=>import('../views/ContactUs.vue'),
-    meta:{
-      requiresAuth:true
-    }
+    component: ()=>import('../views/Home/Contact.vue'),
   },
+
+
   {
     path:'/BlogListComponent',
     name:'BlogListComponent',

@@ -95,7 +95,6 @@
             formData.append('content', this.post.content)
             formData.append('image', this.selectedFile)
             formData.append('old_image', this.post.image)
-
     
             const response = await API.updatePost(this.$route.params.id, formData)
             this.$router.push({ name: 'ListPost', params: { message: response.message } })
