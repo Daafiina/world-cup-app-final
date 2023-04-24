@@ -42,9 +42,15 @@
               <router-link to="/ContactUs">Contact us</router-link></li>
               <router-link v-if="isUser" to="/ListPost">Lajmet</router-link>
 
+              
+
+
 
               <router-link v-if="isAdmin" to="/AddPost">Shto Lajme</router-link>
               <router-link v-if="isAdmin" to="/users">Users</router-link>
+
+              <router-link v-if="isAdmin" to="/CreatePage">Shto Fanellat</router-link>
+              <router-link v-if="isUser" to="/ListProd">Fanellat</router-link>
 
 
               <li v-if="isUser"><router-link to="/user">User Page</router-link></li>

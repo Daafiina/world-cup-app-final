@@ -2,6 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import {auth} from '../firebase'
 
+import Products from "../views/ProductsPage.vue";
+import CreateProduct from "../views/CreatePage.vue";
+//import Listprod from "../views/ListProd.vue";
+
 
 const routes = [
   {
@@ -104,28 +108,45 @@ component:()=>import('../components/FanellatListComponent.vue')
       name:"edit-post",
       component:()=>import('../views/EditPost.vue')
     },
-
-    {
-      path: '/create',
-      name: 'Create',
-      component: () =>
-        import('../views/Create.vue'),
-    },
-    {
-      path: '/update/:id',
-      name: 'Update',
-      component: () =>
-        import( '../views/Update.vue'),
-    },
     {
       path: '/users',
       name: 'Users',
       component: () =>
         import( '../components/UsersManage.vue'),
     },
-  
-   
     
+    {
+      path: "/products",
+      name: "products",
+      component: Products,
+    },
+    {
+      path: "/CreatePage",
+      name: "CreatePage",
+     //meta: {
+       // isAdmin: true,
+     // },
+      component: CreateProduct,
+    },
+
+    {
+      path:'/ListProd',
+      name:"ListProd",
+      component:()=>import('../views/ListProd.vue')
+    },
+
+    
+/*
+    {
+      path: "/list-product",
+      name: "LitProduct",
+     // meta: {
+       // isAdmin: true,
+     // },
+      component: Listprod,
+    },
+   
+  */
     
     
   
