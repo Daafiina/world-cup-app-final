@@ -1,6 +1,7 @@
 import { createStore } from 'vuex'
 import router from '@/router'
 import axios from 'axios';
+import productModule from "./modules/productModule";
 
 
 // firebase imports
@@ -20,6 +21,11 @@ const store = createStore({
     authIsReady: false,
     userRole: null
   },
+
+  modules:{
+    productModule,
+  },
+  
   mutations: {
     setUser(state, payload) {
       state.user = payload
