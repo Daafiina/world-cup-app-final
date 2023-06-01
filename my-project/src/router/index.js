@@ -64,7 +64,7 @@ const routes = [
     component:()=>import('../components/BlogEditComponent.vue')
   },
   {
-    path:'/LajmetQendrore',
+    path:'/ ',
     name:'LajmetQendrore',
     component:()=>import('../components/LajmetQendrore.vue')
   },

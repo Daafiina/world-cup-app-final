@@ -1,33 +1,5 @@
 <template>
 
-<!-- <div>
-  <div class="mx-auto" style="width: 50%;">
-    <div class="pa-5">
-      <h2>Add New Post</h2>
-      <hr>
-      <form ref="form" class="pa-5" enctype="multipart/form-data" @submit.prevent="submitForm()">
-        <div class="form-group">
-          <label for="title">Title</label>
-          <input type="text" class="form-control" v-model="post.title" id="title" placeholder="Enter title" required>
-        </div>
-        <div class="form-group">
-          <label for="category">Category</label>
-          <input type="text" class="form-control" id="category" v-model="post.category" placeholder="Enter category" required>
-        </div>
-        <div class="form-group">
-          <label for="content">Content</label>
-          <textarea class="form-control" id="content" rows="5" v-model="post.content" placeholder="Enter content" prepend-icon="mdi-note" required></textarea>
-        </div>
-        <div class="form-group">
-          <label for="image">Select Image</label>
-          <input type="file" @change="selectFile"  class="form-control-file" id="image" multiple required>
-        </div>
-        <button type="submit" class="btn btn-primary mt-3">Add Post</button>
-        
-      </form>
-    </div>
-  </div>
-</div> -->
 
 <div>
     <div class="container">
@@ -70,7 +42,7 @@
 <script>
 import API from '../api'
 
-export default {
+export default{
   data() {
     return {
       post: {

@@ -1,23 +1,5 @@
 <template>
 
-    <!-- <v-container>
-        <v-row>
-            <v-col sm="4" class =" pa-3" v-for="post in posts" :key="post._is">
-                <v-card>asd
-                    <v-img :src="`/${post.image}`"></v-img>
-                    <v-btn class = "ml-4 mt-3">{{ post.category }}</v-btn>
-
-                    <v-card-title class="headline">{{ post.title }}</v-card-title>
-
-                    <v-card-text class = "py-0">
-                        <p>{{ post.content.substring(0,100) + "..." }}</p>
-                        </v-card-text>
-                </v-card>
-            </v-col>
-        </v-row>
-
-
-    </v-container> -->
     <div class="container">
       <div v-if="$route.params.message" class="alert alert-success alert-dismissible fade show" role="alert">
   {{ $route.params.message }}

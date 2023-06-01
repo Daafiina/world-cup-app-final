@@ -41,11 +41,7 @@ io.on('connection', (socket)=>{
         })
         callback()
 
-        //socket-emit: sends a message to a specific user
-        //io.emit: sends message to all users
-        //socket.broadcast.emit: sends to users but not the user who sent it
-        //io.to.emit: emits message to everyone in a specific room
-        //socket.broadcast.to.emmit: limit a specific room
+       
 
     })
 
